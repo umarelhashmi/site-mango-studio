@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANGO Hair Studio | Luxury Hair Color, Balayage, Blowouts &amp; Extensions · Lake Nona &amp; College Park, Orlando</title>
+  <meta name="description" content="MANGO Hair Studio in Lake Nona &amp; College Park (Packing District), Orlando. Specializing in Balayage, AirTouch, Highlights, Kérastase Treatments, Hair Extensions, and Signature Blowouts." />
+  <meta name="theme-color" content="#FAF8F5" />
+
+  <!-- Preconnect & Google Fonts: Cormorant Garamond (matches MANGO classical Roman serif) + Plus Jakarta Sans (matches HAIR STUDIO geometric tracking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Preload Critical LCP Hero Images (Middle photo is first on mobile & center on desktop) -->
+  <link rel="preload" as="image" href="assets/images/hero/hero-center-front.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/logo-dark.png" type="image/png" />
+
+  <link rel="icon" type="image/png" href="assets/images/logo-dark.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- FLOATING VANITY NAVIGATION BAR -->
+  <header class="vanity-header" id="top">
+    <div class="vanity-header__inner">
+      <a href="#top" class="vanity-brand" aria-label="MANGO Hair Studio Home">
+        <img src="assets/images/logo-dark.png" alt="MANGO Hair Studio" class="vanity-brand__logo" width="210" height="62" />
+      </a>
+
+      <nav class="vanity-nav" aria-label="Primary Navigation">
+        <a href="#services" class="vanity-nav__link">Services &amp; Prices</a>
+        <a href="#lookbook" class="vanity-nav__link">Hair Lookbook</a>
+        <a href="#stylists" class="vanity-nav__link">Stylists</a>
+        <a href="#reviews" class="vanity-nav__link">
+          Google Reviews
+          <span class="vanity-nav__badge" id="navReviewRating">4.9★</span>
+        </a>
+        <a href="#locations" class="vanity-nav__link">Locations &amp; Policy</a>
+      </nav>
+
+      <div class="vanity-actions">
+        <a href="tel:+14077304347" class="vanity-phone" title="Call Lake Nona Studio: (407) 730-4347">
+          <span class="vanity-phone__dot"></span>
+          <span>(407) 730-4347</span>
+        </a>
+        <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-order-online">
+          <span>Order Online</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         FIRST VIEW: TRIPLE-SPLIT VANITY MIRROR TRIPTYCH
+         Desktop: Back Pose (Left) · Front Pose (Middle) · Side Pose (Right)
+         Mobile: Starts on Middle (Front) photo and cross-fades every 2.0s in a loop
+         ===================================================================== -->
+    <section class="triptych-hero" aria-label="Signature Hairstyles Showcase">
+      <div class="triptych-stage" id="heroTriptychStage">
+
+        <!-- LEFT MIRROR LEAF: BACK POSE -->
+        <article class="triptych-panel triptych-panel--left" data-slide-index="1" data-pose="Back View">
+          <picture class="triptych-picture">
+            <source srcset="assets/images/hero/hero-left-back.webp" type="image/webp" />
+            <img
+              src="assets/images/hero/hero-left-back.jpg"
+              alt="Back view of cascading dimensional honey-caramel balayage waves at MANGO Hair Studio"
+              class="triptych-img"
+              width="1000"
+              height="1500"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="triptych-MirrorTag">
+            <span class="triptych-MirrorTag__pose">Back View</span>
+            <span class="triptych-MirrorTag__style">Dimensional Balayage &amp; Gloss</span>
+          </div>
+        </article>
+
+        <!-- MIDDLE MIRROR LEAF: FRONT POSE (Starts first on Mobile) -->
+        <article class="triptych-panel triptych-panel--center is-mobile-active" data-slide-index="0" data-pose="Front View">
+          <picture class="triptych-picture">
+            <source srcset="assets/images/hero/hero-center-front.webp" type="image/webp" />
+            <img
+              src="assets/images/hero/hero-center-front.jpg"
+              alt="Front view of voluminous silky blowout layers and face-framing highlights at MANGO Hair Studio"
+              class="triptych-img"
+              width="1000"
+              height="1500"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="triptych-MirrorTag">
+            <span class="triptych-MirrorTag__pose">Front View</span>
+            <span class="triptych-MirrorTag__style">Signature Blowout &amp; Frame Highlights</span>
+          </div>
+        </article>
+
+        <!-- RIGHT MIRROR LEAF: SIDE POSE -->
+        <article class="triptych-panel triptych-panel--right" data-slide-index="2" data-pose="Side Pose">
+          <picture class="triptych-picture">
+            <source srcset="assets/images/hero/hero-right-side.webp" type="image/webp" />
+            <img
+              src="assets/images/hero/hero-right-side.jpg"
+              alt="Side profile pose of copper-gold silk waves at MANGO Hair Studio"
+              class="triptych-img"
+              width="1000"
+              height="1500"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="triptych-MirrorTag">
+            <span class="triptych-MirrorTag__pose">Side Pose</span>
+            <span class="triptych-MirrorTag__style">Copper Silk &amp; AirTouch Color</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Minimal Floating Vanity Overlay Dock (Never obstructs the faces/hair) -->
+      <div class="triptych-dock">
+        <div class="triptych-dock__brand">
+          <img src="assets/images/logo-light.png" alt="MANGO Hair Studio" class="triptych-dock__logo" width="180" height="53" />
+          <div class="triptych-dock__meta">
+            <span>Lake Nona &amp; College Park · Orlando</span>
+            <span class="triptych-dock__sep">•</span>
+            <a href="#reviews" class="triptych-dock__rating">
+              <strong>4.9 ★</strong> (<span id="heroReviewCount">687</span> Google Reviews)
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile 2-Second Loop Indicator Dots (Front -> Back -> Side) -->
+        <div class="triptych-mobile-dots" aria-label="Hairstyle View Angle">
+          <button type="button" class="triptych-dot is-active" data-target-slide="0">Front</button>
+          <button type="button" class="triptych-dot" data-target-slide="1">Back</button>
+          <button type="button" class="triptych-dot" data-target-slide="2">Side</button>
+        </div>
+
+        <div class="triptych-dock__ctas">
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-dock-primary">
+            Order Online
+          </a>
+          <a href="#services" class="btn-dock-secondary">
+            Services &amp; Prices
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: ASYMMETRIC SALON CHAIR SELECTOR & CHROMATIC SWATCH MENU
+         Exact Services & Prices from mangobeauty.us (/for-women, /for-men, /for-kids)
+         ===================================================================== -->
+    <section class="swatch-atelier" id="services">
+      <div class="swatch-atelier__grid">
+
+        <!-- LEFT STICKY COLUMN: Sculpted Vanity Mirror Preview + Original Hero Photo + Estimate Tray -->
+        <aside class="atelier-mirror-col">
+          <div class="atelier-mirror-card">
+            <div class="atelier-mirror-frame">
+              <img
+                src="assets/images/original/wp_Kerastase_Genesis_2.jpg"
+                alt="For Women — MANGO Hair Studio Original Kérastase Feature"
+                id="audienceHeroImg"
+                class="atelier-mirror-img"
+                width="640"
+                height="640"
+                loading="lazy"
+              />
+              <span class="atelier-mirror-badge" id="audienceBadge">For Women</span>
+            </div>
+
+            <div class="atelier-mirror-caption">
+              <p class="atelier-mirror-quote" id="audienceQuote">
+                “We do our best to make you look gorgeous, from hair coloring, straightening to extensions.”
+              </p>
+              <div class="atelier-mini-strip" aria-label="Salon Hair Previews">
+                <button type="button" class="atelier-mini-thumb" data-lightbox-src="assets/images/reviews/review-06-thalia-dominguez-photo-2.jpg" data-lightbox-caption="Dimensional Balayage &amp; Blowout · MANGO Hair Studio">
+                  <img src="assets/images/reviews/review-06-thalia-dominguez-photo-2.jpg" alt="Balayage transformation" width="90" height="90" loading="lazy" />
+                </button>
+                <button type="button" class="atelier-mini-thumb" data-lightbox-src="assets/images/reviews/review-08-mario-paz-photo-1.jpg" data-lightbox-caption="Vibrant Red &amp; Copper Gloss · MANGO Hair Studio">
+                  <img src="assets/images/reviews/review-08-mario-paz-photo-1.jpg" alt="Red color gloss" width="90" height="90" loading="lazy" />
+                </button>
+                <button type="button" class="atelier-mini-thumb" data-lightbox-src="assets/images/social/gmaps-gallery-03.jpg" data-lightbox-caption="Hair Extensions Installation · MANGO Hair Studio">
+                  <img src="assets/images/social/gmaps-gallery-03.jpg" alt="Hair extensions" width="90" height="90" loading="lazy" />
+                </button>
+                <button type="button" class="atelier-mini-thumb" data-lightbox-src="assets/images/social/instagram-13-post.jpg" data-lightbox-caption="AirTouch &amp; Babylights · MANGO Hair Studio">
+                  <img src="assets/images/social/instagram-13-post.jpg" alt="AirTouch highlights" width="90" height="90" loading="lazy" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Interactive Chair-Side Visit Estimator -->
+            <div class="estimator-tray" id="estimatorTray">
+              <div class="estimator-tray__head">
+                <span class="estimator-tray__title">Chair-Side Estimate</span>
+                <button type="button" class="estimator-tray__clear" id="clearEstimatorBtn" hidden>Clear</button>
+              </div>
+              <div class="estimator-tray__list" id="estimatorList">
+                <p class="estimator-tray__empty">Tap any service on the right to build a price estimate before booking.</p>
+              </div>
+              <div class="estimator-tray__footer">
+                <div class="estimator-tray__total">
+                  <span>Estimated Starting Total</span>
+                  <strong id="estimatorTotal">$0</strong>
+                </div>
+                <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-order-online btn-order-online--full">
+                  Order Online on Vagaro
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT COLUMN: Audience Switch + Hair Color Swatch Fan + Exact Service Ledger -->
+        <div class="atelier-ledger-col">
+          <div class="atelier-ledger-header">
+            <div>
+              <h1 class="atelier-title">Services &amp; Exact Menu</h1>
+            </div>
+
+            <!-- 3-Audience Switch (For Women / For Men / For Kids) -->
+            <div class="audience-switch" role="tablist" aria-label="Service Audience">
+              <button type="button" role="tab" aria-selected="true" class="audience-pill is-active" data-audience="women">
+                <span>For Women</span>
+                <small>41 Services</small>
+              </button>
+              <button type="button" role="tab" aria-selected="false" class="audience-pill" data-audience="men">
+                <span>For Men</span>
+                <small>2 Services</small>
+              </button>
+              <button type="button" role="tab" aria-selected="false" class="audience-pill" data-audience="kids">
+                <span>For Kids</span>
+                <small>10 &amp; Under</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chromatic Swatch Ring Filter (Shown for Women's 6 Categories) -->
+          <div class="swatch-ring-bar" id="womenCategoryBar" aria-label="Filter Women's Services">
+            <button type="button" class="swatch-chip is-active" data-cat="all">
+              <span class="swatch-dot swatch-dot--multi"></span>
+              <span>All Women’s</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Color">
+              <span class="swatch-dot swatch-dot--honey"></span>
+              <span>Color (18)</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Treatments">
+              <span class="swatch-dot swatch-dot--rose"></span>
+              <span>Treatments (14)</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Blow Dry & Style">
+              <span class="swatch-dot swatch-dot--pearl"></span>
+              <span>Blow Dry &amp; Style (4)</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Haircut">
+              <span class="swatch-dot swatch-dot--espresso"></span>
+              <span>Haircut (2)</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Up-do">
+              <span class="swatch-dot swatch-dot--copper"></span>
+              <span>Up-do (2)</span>
+            </button>
+            <button type="button" class="swatch-chip" data-cat="Hair extensions">
+              <span class="swatch-dot swatch-dot--platinum"></span>
+              <span>Hair Extensions (1)</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Service Groups Container (Populated deterministically + SSR fallback) -->
+          <div class="service-ledger" id="serviceLedgerContainer">
+            <!-- Populated by app.js with all exact names & prices from mangobeauty.us -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: REAL CHAIR-SIDE TRANSFORMATIONS & ORIGINAL KÉRASTASE RITUALS
+         Non-standard interlocking sculpted frames (Oval · Arch · Chamfered)
+         Compact on mobile so no single image ever fills the screen
+         ===================================================================== -->
+    <section class="lookbook-ribbon" id="lookbook">
+      <div class="lookbook-ribbon__head">
+        <div>
+          <h2 class="section-heading">Real Hair Transformations</h2>
+          <p class="section-sub">From our chairs in Lake Nona &amp; College Park — Balayage, AirTouch, Extensions, Blonding &amp; Vivid Gloss.</p>
+        </div>
+        <div class="lookbook-social-pills">
+          <a href="https://www.instagram.com/mangohairstudio.lakenona/" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <span>@mangohairstudio.lakenona</span>
+            <small>19K Followers</small>
+          </a>
+          <a href="https://www.facebook.com/mangoblowdrybarandspa/" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <span>Facebook</span>
+            <small>100% Recommend</small>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sculpted Interlocking Hair Mosaic (Compact multi-column on mobile, never full-screen) -->
+      <div class="hair-mosaic">
+        <figure class="mosaic-item mosaic-item--arch" data-lightbox-src="assets/images/reviews/review-06-thalia-dominguez-photo-3.jpg" data-lightbox-caption="Dimensional Caramel Balayage Waves · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-06-thalia-dominguez-photo-3.jpg" alt="Dimensional caramel balayage waves" width="600" height="750" loading="lazy" />
+          <figcaption>Dimensional Balayage</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--oval" data-lightbox-src="assets/images/reviews/review-06-thalia-dominguez-photo-1.jpg" data-lightbox-caption="Face-Framing Money Piece &amp; Soft Waves · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-06-thalia-dominguez-photo-1.jpg" alt="Face-framing highlights and curls" width="600" height="750" loading="lazy" />
+          <figcaption>Frame Highlight &amp; Curls</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--chamfer" data-lightbox-src="assets/images/reviews/review-03-kelly-drouet-hill-photo-1.jpg" data-lightbox-caption="Rich Auburn-Cherry Layered Blowout · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-03-kelly-drouet-hill-photo-1.jpg" alt="Auburn layered blowout" width="600" height="750" loading="lazy" />
+          <figcaption>Auburn Layered Blowout</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--arch" data-lightbox-src="assets/images/social/instagram-18-post.jpg" data-lightbox-caption="Sunlit Honey Melt &amp; Lived-In Blonde · MANGO Hair Studio">
+          <img src="assets/images/social/instagram-18-post.jpg" alt="Lived-in honey blonde balayage" width="600" height="750" loading="lazy" />
+          <figcaption>Color Melt &amp; Gloss</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--oval" data-lightbox-src="assets/images/social/gmaps-gallery-14.jpg" data-lightbox-caption="AirTouch Brunette-to-Gold Blend · MANGO Hair Studio">
+          <img src="assets/images/social/gmaps-gallery-14.jpg" alt="AirTouch dimensional brunette" width="600" height="750" loading="lazy" />
+          <figcaption>AirTouch Partial</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--chamfer" data-lightbox-src="assets/images/social/gmaps-gallery-12.jpg" data-lightbox-caption="Defined Burgundy Curl Manifesto Transformation · MANGO Hair Studio">
+          <img src="assets/images/social/gmaps-gallery-12.jpg" alt="Textured curly burgundy color" width="600" height="750" loading="lazy" />
+          <figcaption>Textured Curls &amp; Color</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--arch" data-lightbox-src="assets/images/reviews/review-10-vanessa-c-photo-1.jpg" data-lightbox-caption="Ash-Bronde Highlights &amp; Silk Wave Finish · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-10-vanessa-c-photo-1.jpg" alt="Bronde highlights and waves" width="600" height="750" loading="lazy" />
+          <figcaption>Full Hi-Lights</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--oval" data-lightbox-src="assets/images/social/instagram-14-post.jpg" data-lightbox-caption="Feather-Light Golden Layers &amp; Blow Dry · MANGO Hair Studio">
+          <img src="assets/images/social/instagram-14-post.jpg" alt="Golden blonde layered haircut" width="600" height="750" loading="lazy" />
+          <figcaption>Cut &amp; Blow Dry</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--chamfer" data-lightbox-src="assets/images/social/facebook-11.jpg" data-lightbox-caption="Custom Hair Extension Color Matching · MANGO Hair Studio">
+          <img src="assets/images/social/facebook-11.jpg" alt="Hair extension color match consultation" width="600" height="750" loading="lazy" />
+          <figcaption>Extensions Color Match</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--arch" data-lightbox-src="assets/images/reviews/review-07-cassie-potter-photo-1.jpg" data-lightbox-caption="Dimensional Blonde &amp; Lowlights by Ali · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-07-cassie-potter-photo-1.jpg" alt="Blonde highlights and blowout" width="600" height="750" loading="lazy" />
+          <figcaption>Blonde &amp; Lowlights</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--oval" data-lightbox-src="assets/images/reviews/review-16-daniel-noboa-photo-1.jpg" data-lightbox-caption="Warm Chestnut &amp; Caramel Balayage · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-16-daniel-noboa-photo-1.jpg" alt="Warm chestnut balayage" width="600" height="750" loading="lazy" />
+          <figcaption>Warm Chestnut Balayage</figcaption>
+        </figure>
+
+        <figure class="mosaic-item mosaic-item--chamfer" data-lightbox-src="assets/images/reviews/review-05-ha-thomas-photo-3.jpg" data-lightbox-caption="Vivid Magenta &amp; Cobalt Fantasy Color · MANGO Hair Studio">
+          <img src="assets/images/reviews/review-05-ha-thomas-photo-3.jpg" alt="Fantasy color pink and blue hair" width="600" height="750" loading="lazy" />
+          <figcaption>Fantasy Color</figcaption>
+        </figure>
+      </div>
+
+      <!-- ORIGINAL MANGOBEAUTY.US KÉRASTASE & SALON COLLECTION STRIP -->
+      <div class="kerastase-bar">
+        <div class="kerastase-bar__head">
+          <span class="kerastase-bar__label">Original Studio &amp; Kérastase Ritual Collection</span>
+          <span class="kerastase-bar__hint">Swipe or click any ritual photo</span>
+        </div>
+        <div class="kerastase-strip">
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_ChromaAbsolu_1.jpg" data-lightbox-caption="Kérastase Chroma Absolu Color Care · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_ChromaAbsolu_1.jpg" alt="Kérastase Chroma Absolu" width="260" height="260" loading="lazy" />
+            <figcaption>Chroma Absolu</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_Gloss_Absolu_5-scaled.jpg" data-lightbox-caption="Kérastase Gloss Absolu Hydra-Glaze · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_Gloss_Absolu_5-scaled.jpg" alt="Kérastase Gloss Absolu" width="260" height="260" loading="lazy" />
+            <figcaption>Gloss Absolu</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_Gloss_Absolu_7-1-scaled.jpg" data-lightbox-caption="Kérastase Glaze Drops High-Shine Oil · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_Gloss_Absolu_7-1-scaled.jpg" alt="Kérastase Glaze Drops" width="260" height="260" loading="lazy" />
+            <figcaption>Glaze Drops</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Fusio-Dose-1.jpg" data-lightbox-caption="Kérastase Fusio-Dose Custom Concentrates · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Fusio-Dose-1.jpg" alt="Kérastase Fusio-Dose" width="260" height="260" loading="lazy" />
+            <figcaption>Fusio-Dose</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_Chronologiste_1.jpg" data-lightbox-caption="Kérastase Chronologiste Luxury Revitalizing Ritual · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_Chronologiste_1.jpg" alt="Kérastase Chronologiste" width="260" height="260" loading="lazy" />
+            <figcaption>Chronologiste</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_CurlManifesto_3.jpg" data-lightbox-caption="Kérastase Curl Manifesto Hydration · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_CurlManifesto_3.jpg" alt="Kérastase Curl Manifesto" width="260" height="260" loading="lazy" />
+            <figcaption>Curl Manifesto</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Elixir_Ultime_3-scaled.jpg" data-lightbox-caption="Kérastase L'Huile Originale Elixir Ultime · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Elixir_Ultime_3-scaled.jpg" alt="Kérastase Elixir Ultime" width="260" height="260" loading="lazy" />
+            <figcaption>Elixir Ultime</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/original/wp_Kerastase_SpecifiqueDivalent_2.jpg" data-lightbox-caption="Kérastase Spécifique Scalp Ritual · MANGO Hair Studio">
+            <img src="assets/images/original/wp_Kerastase_SpecifiqueDivalent_2.jpg" alt="Kérastase Spécifique Scalp Treatment" width="260" height="260" loading="lazy" />
+            <figcaption>Spécifique Scalp</figcaption>
+          </figure>
+          <figure class="kerastase-card" data-lightbox-src="assets/images/social/instagram-10-post.jpg" data-lightbox-caption="Velisse Tape-In Hair Extensions at MANGO Hair Studio">
+            <img src="assets/images/social/instagram-10-post.jpg" alt="Velisse Hair Extensions" width="260" height="260" loading="lazy" />
+            <figcaption>Velisse Extensions</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- ORIGINAL VAGARO STYLIST TEAM STRIP -->
+      <div class="stylist-band" id="stylists">
+        <div class="stylist-band__head">
+          <div>
+            <h3 class="stylist-band__title">Meet Our Stylists</h3>
+            <p class="stylist-band__sub">Lake Nona &amp; College Park artists — tap any stylist to book directly on Vagaro.</p>
+          </div>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-order-online">
+            Order Online
+          </a>
+        </div>
+
+        <div class="stylist-scroller">
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Charles.jpeg" alt="Charles Garcia" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Charles Garcia</strong>
+              <span>4.8 ★ (39) · Cut, Color &amp; Style</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Mary.jpeg" alt="Mary Rakhmedova" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Mary Rakhmedova</strong>
+              <span>5.0 ★ (25) · Blowouts, Layers &amp; Blonding</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Soad.jpeg" alt="Soad Hoballah" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Soad Hoballah</strong>
+              <span>5.0 ★ (21) · Balayage, Blonding &amp; Cuts</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Ben.jpeg" alt="Ben Escoda" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Ben Escoda</strong>
+              <span>4.8 ★ (20) · Master Stylist &amp; Extensions</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Feruza.jpeg" alt="Feruza A" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Feruza A</strong>
+              <span>5.0 ★ (14) · Highlights, Balayage &amp; Cuts</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Jennifer.jpeg" alt="Jennifer Castrillon" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Jennifer Castrillon</strong>
+              <span>5.0 ★ (13) · Blondes, Keratin &amp; Extensions</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Sherry.jpeg" alt="Sherry Gerstz" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Sherry Gerstz</strong>
+              <span>5.0 ★ (10) · Precision Styling &amp; Color</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Omar.png" alt="Omar Coss" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Omar Coss</strong>
+              <span>5.0 ★ (6) · Master Stylist &amp; Colorist</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Kassandra.jpeg" alt="Kassandra Gonzalez" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Kassandra Gonzalez</strong>
+              <span>5.0 ★ (6) · Lived-In Color &amp; Blondes</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Victoria.jpg" alt="Victoria Sileckaya" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Victoria Sileckaya</strong>
+              <span>5.0 ★ (6) · Senior Color &amp; Styling</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Olga.jpeg" alt="Olga Aleynikova" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Olga Aleynikova</strong>
+              <span>AirTouch, Balayage &amp; Color Correction</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangohairstudiocollegepark" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Aida.jpeg" alt="Aida Colette Lawrence" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Aida Colette Lawrence</strong>
+              <span>Master Stylist · Silk Press &amp; Color</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangohairstudiocollegepark" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Chanel.jpeg" alt="Chanel Perez" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Chanel Perez</strong>
+              <span>Bridal, Editorial &amp; Event Styling</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangohairstudiocollegepark" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Janae.jpeg" alt="Janae Wood" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Janae Wood</strong>
+              <span>Extensions &amp; Redken Color Specialist</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Adelis.jpeg" alt="Adelis Ortiz" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Adelis Ortiz</strong>
+              <span>Custom Cuts &amp; Event Styling</span>
+            </div>
+          </a>
+          <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="stylist-chip">
+            <img src="assets/images/original/vagaro_staff_Lourymar.jpeg" alt="Lourymar Merced" width="120" height="120" loading="lazy" />
+            <div>
+              <strong>Lourymar Merced</strong>
+              <span>20+ Yrs · Cuts, Color &amp; Wigs</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: LIVE GOOGLE MAPS REVIEWS & CLIENT PHOTOS
+         Pulls directly from Google Maps via /api/google-reviews.php + fallback
+         ===================================================================== -->
+    <section class="reviews-vault" id="reviews">
+      <div class="reviews-vault__top">
+        <div class="reviews-vault__summary">
+          <div class="reviews-score-pill">
+            <span class="reviews-score-pill__num" id="liveGoogleRating">4.9</span>
+            <div class="reviews-score-pill__stars" aria-label="4.9 out of 5 stars">★★★★★</div>
+            <span class="reviews-score-pill__count"><strong id="liveGoogleTotal">687</strong> Google Reviews</span>
+          </div>
+
+          <div>
+            <div class="live-sync-badge" id="liveSyncBadge">
+              <span class="live-sync-badge__dot"></span>
+              <span id="liveSyncText">Live Google Maps Feed · Auto-Updating</span>
+            </div>
+            <h2 class="section-heading">Latest Google Reviews &amp; Client Photos</h2>
+          </div>
+        </div>
+
+        <div class="reviews-vault__controls">
+          <div class="review-filters" role="tablist" aria-label="Filter Google Reviews">
+            <button type="button" class="review-filter-btn is-active" data-filter="all">Latest Reviews</button>
+            <button type="button" class="review-filter-btn" data-filter="photos">With Photos</button>
+            <button type="button" class="review-filter-btn" data-filter="color">Color &amp; Balayage</button>
+            <button type="button" class="review-filter-btn" data-filter="cut">Cut &amp; Blowout</button>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/Mango+Hair+Studio+Lake+Nona/@28.4331035,-81.2556082,17z/data=!3m1!4b1!4m6!3m5!1s0x88e7618447c3ec51:0x2b90a20db9fd6eeb!8m2!3d28.4331035!4d-81.2556082!16s%2Fg%2F11h7g4kdgz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-google-maps"
+          >
+            View or Review on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Review Cards Grid / Horizontal Deck -->
+      <div class="reviews-deck" id="googleReviewsDeck">
+        <!-- Populated immediately by app.js from live /api/google-reviews.php + preloaded data -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: TWO SALON LOCATIONS, VAGARO ABOUT, GOOGLE ABOUT & CANCELLATION POLICY
+         ===================================================================== -->
+    <section class="studio-dossier" id="locations">
+      <div class="studio-dossier__grid">
+
+        <!-- LEFT COLUMN: Two Locations (mangobeauty.us/contact/ + Vagaro) -->
+        <div class="locations-column">
+          <div class="locations-header">
+            <h2 class="section-heading">Our Two Orlando Studios</h2>
+            <div class="locations-contact-bar">
+              <a href="mailto:info@mangobeauty.us">info@mangobeauty.us</a>
+              <span>•</span>
+              <a href="mailto:jobs@mangobeauty.us">Careers: jobs@mangobeauty.us</a>
+            </div>
+          </div>
+
+          <!-- STORE 1: LAKE NONA -->
+          <article class="store-card store-card--featured">
+            <div class="store-card__media">
+              <img
+                src="assets/images/social/gmaps-gallery-01.jpg"
+                alt="MANGO Hair Studio Lake Nona Storefront — 9201 Narcoossee Rd Suite 100"
+                class="store-card__img"
+                width="480"
+                height="360"
+                loading="lazy"
+              />
+              <span class="store-card__tag">Flagship · Lake Nona</span>
+            </div>
+            <div class="store-card__body">
+              <div class="store-card__top">
+                <h3>MANGO Hair Studio — Lake Nona</h3>
+                <span class="store-card__rating">4.9 ★ (687 Google · 246 Vagaro)</span>
+              </div>
+              <p class="store-card__address">
+                9201 Narcoossee Rd, Suite 100, Orlando, FL 32827
+              </p>
+              <div class="store-card__details">
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+14077304347">(407) 730-4347</a>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:info@mangobeauty.us">info@mangobeauty.us</a>
+                </div>
+                <div>
+                  <strong>Studio Hours</strong>
+                  <span>Open Daily: 9:00 AM – 6:00 PM <small>(Vagaro: 10 AM – 6 PM · Google: 9 AM – 7 PM)</small></span>
+                </div>
+              </div>
+              <div class="store-card__actions">
+                <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-order-online">
+                  Order Online · Lake Nona
+                </a>
+                <a href="https://maps.google.com/?q=28.433339,-81.255608" target="_blank" rel="noopener noreferrer" class="btn-store-map">
+                  Directions
+                </a>
+                <a href="tel:+14077304347" class="btn-store-map">
+                  Call Store
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORE 2: COLLEGE PARK (PACKING DISTRICT) -->
+          <article class="store-card">
+            <div class="store-card__media">
+              <img
+                src="assets/images/original/vagaro_collegepark_gallery_2.png"
+                alt="MANGO Hair Studio College Park Packing District"
+                class="store-card__img store-card__img--contain"
+                width="480"
+                height="360"
+                loading="lazy"
+              />
+              <span class="store-card__tag">College Park · Packing District</span>
+            </div>
+            <div class="store-card__body">
+              <div class="store-card__top">
+                <h3>MANGO Hair Studio — College Park</h3>
+                <span class="store-card__rating">5.0 ★ (Packing District)</span>
+              </div>
+              <p class="store-card__address">
+                2311 N Orange Blossom Trl, Suite 300, Orlando, FL 32804
+              </p>
+              <div class="store-card__details">
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+14075522223">(407) 552-2223</a>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:info@mangobeauty.us">info@mangobeauty.us</a>
+                </div>
+                <div>
+                  <strong>Studio Hours</strong>
+                  <span>Open Daily: 9:00 AM – 6:00 PM <small>(Vagaro: Mon 9 AM–8 PM · Wed/Thu/Sat/Sun 9 AM–7 PM · Tue/Fri 9 AM–6 PM)</small></span>
+                </div>
+              </div>
+              <div class="store-card__actions">
+                <a href="https://www.vagaro.com/mangohairstudiocollegepark" target="_blank" rel="noopener noreferrer" class="btn-order-online">
+                  Order Online · College Park
+                </a>
+                <a href="https://maps.google.com/?q=28.572651,-81.405514" target="_blank" rel="noopener noreferrer" class="btn-store-map">
+                  Directions
+                </a>
+                <a href="tel:+14075522223" class="btn-store-map">
+                  Call Store
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN: Vagaro Business About + Google "About" Amenities + Grammar-Corrected Cancellation Policy -->
+        <div class="policy-column">
+
+          <!-- VAGARO ABOUT ('description') + GOOGLE MAPS ABOUT ATTRIBUTES -->
+          <article class="dossier-panel">
+            <h2 class="dossier-panel__title">About MANGO Hair Studio</h2>
+            <p class="dossier-panel__text">
+              Our hair salon offers a comprehensive range of hair services tailored to meet the unique needs of each client. We specialize in cutting-edge hairstyles, color, hair treatments, and hair extensions, ensuring that our clients leave feeling confident and satisfied. Our skilled stylists stay updated on the latest trends and techniques to provide exceptional results. We prioritize a welcoming atmosphere where clients can relax and enjoy their experience. Committed to using high-quality products, we aim to maintain the health and vibrancy of your hair. Visit us to discover your ideal look and enjoy personalized service in a stylish environment.
+            </p>
+
+            <!-- Google Maps About Tab Highlights & Vagaro Amenities -->
+            <div class="google-about-grid" aria-label="Salon Highlights and Amenities">
+              <div class="about-pill-group">
+                <h4>Accessibility &amp; Space</h4>
+                <ul>
+                  <li>Wheelchair-accessible entrance, parking lot &amp; restroom</li>
+                  <li>Free parking lot at both Orlando locations</li>
+                  <li>LGBTQ+ friendly &amp; Kid friendly (dedicated 10 &amp; under menu)</li>
+                </ul>
+              </div>
+              <div class="about-pill-group">
+                <h4>Hospitality &amp; Amenities</h4>
+                <ul>
+                  <li>Complimentary specialty coffee, cappuccino, water, wine &amp; beer</li>
+                  <li>Free Wi-Fi &amp; TV in lounge</li>
+                  <li>Walk-ins welcome · Online appointments via Vagaro</li>
+                </ul>
+              </div>
+              <div class="about-pill-group">
+                <h4>Languages &amp; Payments</h4>
+                <ul>
+                  <li>Spoken: English, Spanish, French, Russian, Portuguese, Arabic</li>
+                  <li>Accepts Visa, MasterCard, Discover, Amex, Debit Cards &amp; Cash</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- GRAMMAR-CORRECTED CANCELLATION POLICY (100% Meaning Preserved from Vagaro) -->
+          <article class="dossier-panel dossier-panel--policy" id="cancellation-policy">
+            <div class="dossier-panel__header">
+              <h2 class="dossier-panel__title">Our Cancellation Policy</h2>
+              <span class="policy-badge">24-Hour Notice · 50% Fee</span>
+            </div>
+
+            <div class="policy-body">
+              <p>
+                We ask that you please reschedule or cancel at least 24 hours before the beginning of your appointment, or you may be charged a cancellation fee of 50% of the price of your scheduled appointment.
+              </p>
+              <p>
+                Out of respect for the time that our stylists invest in reserving your appointment, fees will be charged for any appointments canceled or rescheduled with less than 24 hours' notice. The same fees will also apply to all no-call, no-shows.
+              </p>
+              <p>
+                The fee must be paid before booking another appointment. The fees are as follows: <strong>50% of any combo or single service.</strong>
+              </p>
+              <p>
+                Without advance notice of cancellations, our stylists are unable to offer accurate availability to you and others. Late arrivals of 15 minutes or more may be subject to having one or more of their services canceled or rescheduled.
+              </p>
+              <p>
+                If you have any questions regarding this policy, please call the salon and our receptionists will gladly answer them. If you couldn't reach us by phone at <a href="tel:+14077304347">(407) 730-4347</a>, you can also send us an email at <a href="mailto:info@mangobeauty.us">info@mangobeauty.us</a>. We are not accepting voice messages or text messages on phone number <a href="tel:+14077304347">(407) 730-4347</a>.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="vanity-footer">
+    <div class="vanity-footer__inner">
+      <div class="vanity-footer__brand">
+        <img src="assets/images/logo-dark.png" alt="MANGO Hair Studio" class="vanity-footer__logo" width="190" height="56" loading="lazy" />
+        <p>Lake Nona: <a href="tel:+14077304347">(407) 730-4347</a> · College Park: <a href="tel:+14075522223">(407) 552-2223</a> · <a href="mailto:info@mangobeauty.us">info@mangobeauty.us</a></p>
+      </div>
+
+      <div class="vanity-footer__links">
+        <a href="https://www.vagaro.com/mangoblowdrybar" target="_blank" rel="noopener noreferrer" class="btn-order-online">
+          Order Online
+        </a>
+        <a href="https://www.instagram.com/mangohairstudio.lakenona/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          Instagram (@mangohairstudio.lakenona)
+        </a>
+        <a href="https://www.facebook.com/mangoblowdrybarandspa/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          Facebook
+        </a>
+        <a href="https://www.google.com/maps/place/Mango+Hair+Studio+Lake+Nona/@28.4331035,-81.2556082,17z/data=!3m1!4b1!4m6!3m5!1s0x88e7618447c3ec51:0x2b90a20db9fd6eeb!8m2!3d28.4331035!4d-81.2556082!16s%2Fg%2F11h7g4kdgz" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          Google Maps
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX DIALOG FOR HAIR TRANSFORMATIONS & REVIEW PHOTOS -->
+  <dialog class="hair-lightbox" id="hairLightbox" aria-label="Hair Photo Viewer">
+    <div class="hair-lightbox__inner">
+      <button type="button" class="hair-lightbox__close" id="closeLightboxBtn" aria-label="Close photo viewer">×</button>
+      <img src="" alt="" id="lightboxImg" class="hair-lightbox__img" />
+      <p id="lightboxCaption" class="hair-lightbox__caption"></p>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
