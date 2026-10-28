@@ -261,6 +261,34 @@
     estimatorTotal.textContent = sum > 0
       ? `$${sum}${hasConsultation ? ' + Consultation' : '+'}`
       : 'Upon Consultation';
+    updateMirrorStickyTop();
+  }
+
+  /* Dynamic Sticky Offset for Left Mirror Column:
+     Scrolls naturally with the page until the bottom of the left column (the
+     Chair-Side Estimate + Order Online button) reaches the bottom of the
+     viewport, then locks in place until the user scrolls past the menu section. */
+  const mirrorCol = document.querySelector('.atelier-mirror-col');
+  function updateMirrorStickyTop() {
+    if (!mirrorCol) return;
+    if (window.innerWidth <= 1080) {
+      mirrorCol.style.removeProperty('--mirror-sticky-top');
+      return;
+    }
+    const bottomGap = 24;
+    const topGap = 86;
+    const colHeight = mirrorCol.offsetHeight;
+    const stickyTop = Math.min(topGap, window.innerHeight - colHeight - bottomGap);
+    mirrorCol.style.setProperty('--mirror-sticky-top', `${stickyTop}px`);
+  }
+
+  if (mirrorCol) {
+    updateMirrorStickyTop();
+    window.addEventListener('resize', updateMirrorStickyTop, { passive: true });
+    if (typeof ResizeObserver !== 'undefined') {
+      const ro = new ResizeObserver(updateMirrorStickyTop);
+      ro.observe(mirrorCol);
+    }
   }
 
   document.querySelectorAll('.audience-pill').forEach((btn) => {
