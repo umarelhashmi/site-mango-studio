@@ -232,12 +232,23 @@
       .join('');
   }
 
+  const mobileEstimateBar = document.getElementById('mobileEstimateBar');
+  const mobileEstimateLabel = document.getElementById('mobileEstimateLabel');
+  const mobileEstimatePrice = document.getElementById('mobileEstimatePrice');
+
   function renderEstimator() {
     if (!estimatorList || !estimatorTotal) return;
-    if (selectedEstimateItems.size === 0) {
+    const count = selectedEstimateItems.size;
+
+    if (count === 0) {
       estimatorList.innerHTML = '<p class="estimator-tray__empty">Tap any service on the right to build a price estimate before booking.</p>';
       estimatorTotal.textContent = '$0';
       if (clearEstimatorBtn) clearEstimatorBtn.hidden = true;
+      if (mobileEstimateBar) {
+        mobileEstimateBar.classList.remove('is-visible');
+        mobileEstimateBar.hidden = true;
+      }
+      updateMirrorStickyTop();
       return;
     }
 
@@ -257,10 +268,28 @@
       `);
     });
 
-    estimatorList.innerHTML = html.join('');
-    estimatorTotal.textContent = sum > 0
+    const formattedTotal = sum > 0
       ? `$${sum}${hasConsultation ? ' + Consultation' : '+'}`
       : 'Upon Consultation';
+
+    estimatorList.innerHTML = html.join('');
+    estimatorTotal.textContent = formattedTotal;
+
+    if (mobileEstimateBar && mobileEstimateLabel && mobileEstimatePrice) {
+      if (count === 1) {
+        mobileEstimateLabel.textContent = 'Estimated starting total';
+      } else if (count === 2) {
+        mobileEstimateLabel.textContent = 'Estimated starting total for both services';
+      } else {
+        mobileEstimateLabel.textContent = `Estimated starting total for all ${count} services`;
+      }
+      mobileEstimatePrice.textContent = formattedTotal;
+      mobileEstimateBar.hidden = false;
+      requestAnimationFrame(() => {
+        mobileEstimateBar.classList.add('is-visible');
+      });
+    }
+
     updateMirrorStickyTop();
   }
 

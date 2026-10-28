@@ -1936,4 +1936,117 @@ button {
   .google-about-grid {
     grid-template-columns: 1fr;
   }
+
+  .vanity-footer {
+    padding-bottom: 104px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE FLOATING ESTIMATE BAR (Appears at bottom when user selects 1+ items)
+   Round-edged rectangle with double-beveled champagne-gold & filigree border
+   ========================================================================== */
+.mobile-estimate-bar {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  /* Hide itemized estimator tray on mobile — use the bottom floating bar instead */
+  .estimator-tray {
+    display: none !important;
+  }
+
+  .mobile-estimate-bar {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+    z-index: 95;
+    padding: 5px;
+    border-radius: 22px;
+    background: linear-gradient(
+      135deg,
+      #FCF8F0 0%,
+      #DFBC8B 24%,
+      #B88446 48%,
+      #FAF2E4 74%,
+      #C79455 100%
+    );
+    border: 1.5px solid #B98748;
+    box-shadow:
+      0 20px 44px -8px rgba(18, 12, 8, 0.42),
+      0 0 0 1px rgba(255, 251, 244, 0.9) inset,
+      0 0 0 3px rgba(185, 135, 72, 0.22);
+    transform: translateY(24px);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.28s ease;
+  }
+
+  .mobile-estimate-bar[hidden] {
+    display: none !important;
+  }
+
+  .mobile-estimate-bar.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-estimate-bar__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px 12px 18px;
+    border-radius: 17px;
+    background: linear-gradient(160deg, #1E1714 0%, #140F0D 100%);
+    border: 1px solid rgba(246, 217, 172, 0.55);
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.35);
+    color: #FAF8F5;
+  }
+
+  .mobile-estimate-bar__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .mobile-estimate-bar__label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: rgba(250, 248, 245, 0.86);
+    line-height: 1.25;
+  }
+
+  .mobile-estimate-bar__price {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #F5CE96;
+  }
+
+  .mobile-estimate-bar__cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #FCF8F0 0%, #EAD0A8 100%);
+    color: #18120F;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: 1px solid #D4A76A;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+  }
 }
