@@ -249,25 +249,92 @@ button {
   position: relative;
   flex: 1;
   overflow: hidden;
-  background: #E8DFD3;
-  border: 1px solid rgba(196, 132, 69, 0.35);
-  box-shadow: var(--shadow-vanity);
-  transition: flex 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s ease;
+  padding: 9px;
+  background: linear-gradient(
+    145deg,
+    #FCF8F0 0%,
+    #DFBC8B 22%,
+    #B88446 46%,
+    #FAF2E4 70%,
+    #C79455 100%
+  );
+  border: 1.5px solid #B98748;
+  box-shadow:
+    0 24px 52px -14px rgba(24, 17, 13, 0.28),
+    0 0 0 1px rgba(255, 251, 244, 0.9) inset,
+    0 0 0 4px rgba(185, 135, 72, 0.16);
+  transition:
+    flex 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
-/* Sculpted 3-Way Vanity Mirror Geometry */
+/* Inner Filigree Gold Hairline & Glass Bevel */
+.triptych-panel::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255, 250, 240, 0.85);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.triptych-panel::after {
+  content: "";
+  position: absolute;
+  inset: 17px;
+  border: 1px solid rgba(246, 217, 172, 0.72);
+  box-shadow:
+    0 0 0 1px rgba(28, 18, 12, 0.18),
+    inset 0 0 22px rgba(20, 14, 10, 0.18);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Sculpted 3-Way Vanity Mirror Geometry (Outer Bezel + Inner Filigree + Picture) */
 .triptych-panel--left {
-  border-radius: 130px 22px 22px 22px;
+  border-radius: 134px 26px 26px 26px;
+}
+.triptych-panel--left::before {
+  border-radius: 129px 21px 21px 21px;
+}
+.triptych-panel--left .triptych-picture {
+  border-radius: 125px 17px 17px 17px;
+}
+.triptych-panel--left::after {
+  border-radius: 117px 11px 11px 11px;
 }
 
 .triptych-panel--center {
   flex: 1.14;
-  border-radius: 88px 88px 22px 22px;
-  border-color: rgba(196, 132, 69, 0.55);
+  border-radius: 94px 94px 26px 26px;
+  border-color: #AD7A3B;
+  box-shadow:
+    0 28px 60px -14px rgba(24, 17, 13, 0.34),
+    0 0 0 1px rgba(255, 251, 244, 0.95) inset,
+    0 0 0 5px rgba(185, 135, 72, 0.24);
+}
+.triptych-panel--center::before {
+  border-radius: 89px 89px 21px 21px;
+}
+.triptych-panel--center .triptych-picture {
+  border-radius: 85px 85px 17px 17px;
+}
+.triptych-panel--center::after {
+  border-radius: 77px 77px 11px 11px;
 }
 
 .triptych-panel--right {
-  border-radius: 22px 130px 22px 22px;
+  border-radius: 26px 134px 26px 26px;
+}
+.triptych-panel--right::before {
+  border-radius: 21px 129px 21px 21px;
+}
+.triptych-panel--right .triptych-picture {
+  border-radius: 17px 125px 17px 17px;
+}
+.triptych-panel--right::after {
+  border-radius: 11px 117px 11px 11px;
 }
 
 @media (min-width: 769px) {
@@ -276,17 +343,26 @@ button {
   }
   .triptych-stage .triptych-panel:hover {
     flex: 1.32;
+    box-shadow:
+      0 30px 64px -12px rgba(24, 17, 13, 0.38),
+      0 0 0 1px rgba(255, 252, 246, 0.98) inset,
+      0 0 0 5px rgba(196, 132, 69, 0.32);
   }
 }
 
-.triptych-picture,
+.triptych-picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(32, 20, 12, 0.22);
+}
+
 .triptych-img {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.triptych-img {
   object-fit: cover;
   object-position: center 18%;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1666,7 +1742,7 @@ button {
     height: 100svh;
     min-height: 560px;
     max-height: none;
-    padding: 0;
+    padding: 64px 10px 10px;
   }
 
   .triptych-stage {
@@ -1676,15 +1752,37 @@ button {
     gap: 0;
   }
 
-  .triptych-panel {
+  .triptych-panel,
+  .triptych-panel--left,
+  .triptych-panel--center,
+  .triptych-panel--right {
     position: absolute;
     inset: 0;
-    border-radius: 0;
-    border: none;
+    padding: 7px;
+    border-radius: 44px 44px 24px 24px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.65s ease-in-out;
     z-index: 1;
+  }
+
+  .triptych-panel--left::before,
+  .triptych-panel--center::before,
+  .triptych-panel--right::before {
+    border-radius: 40px 40px 20px 20px;
+  }
+
+  .triptych-panel--left .triptych-picture,
+  .triptych-panel--center .triptych-picture,
+  .triptych-panel--right .triptych-picture {
+    border-radius: 37px 37px 17px 17px;
+  }
+
+  .triptych-panel--left::after,
+  .triptych-panel--center::after,
+  .triptych-panel--right::after {
+    inset: 14px;
+    border-radius: 31px 31px 12px 12px;
   }
 
   .triptych-panel.is-mobile-active {
